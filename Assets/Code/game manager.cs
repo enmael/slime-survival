@@ -13,7 +13,6 @@ public class gamemanager : MonoBehaviour
     // }
     #endregion
 
-    #region 수정된 코드 
     public static gamemanager instance; // 싱글톤 인스턴스
     public Move move; // 플레이어 또는 타겟 오브젝트
 
@@ -32,6 +31,5 @@ public class gamemanager : MonoBehaviour
     }
     // 근대 구지 여기에 싱글톤 을 사용해야 되나 ?
     // 어차피 한 씬에서 모든걸 다 처리하는 게임 인데...
-    #endregion
 
 }

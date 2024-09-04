@@ -1,3 +1,12 @@
+/*
+# ----------------------------------------------------------------------------------------
+#파일이름 :Move.cs
+#작성자 : 장승배
+#생성일 : 2024.09.02
+#내용 : 플레이어 캐릭터의 움직임을 구현 
+# ------------------------------------------------------------------------------------------
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,9 +58,6 @@ public class Move : MonoBehaviour
 
     #endregion
 
-
-    #region 수정된 코드
-
     public Vector2 inputV2;
     public float speed = 3.0f ;
 
@@ -85,5 +91,4 @@ public class Move : MonoBehaviour
             spriteRenderer.flipX = inputV2.x < 0;
         }   
     }
-    #endregion
 }

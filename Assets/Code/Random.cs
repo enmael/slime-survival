@@ -1,3 +1,12 @@
+/*
+# ----------------------------------------------------------------------------------------
+#파일이름 :Random.cs
+#작성자 : 장승배
+#생성일 : 2024.09.03
+#내용 : 플레이어의 위치값을 가지고 x 축 20, y 축 20 범위 내에서 랜덤하게 몬스터 소환하는 코드 
+# ------------------------------------------------------------------------------------------
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -132,13 +141,20 @@ public class Random : MonoBehaviour
 #endregion
 #endregion
 
-#region 수정된 코드
+
+
  public Transform playerTransform ; // 플레이어의 현재 좌표값 가져옴
  private float timeElapsed = 0; // 시간 
 
 private int count = 0;  
-[SerializeField] GameObject []gameObject ;
 
+
+//오브젝트 불러오기
+[SerializeField] GameObject []gameObject ; 
+//몬스터의 종류의 갯수
+[SerializeField] int typeMonsters;
+//몬스터 소환할 갯수 
+[SerializeField] int monstersNumber;
 
 // private void Awake() 
 // {
@@ -156,7 +172,7 @@ void SpawnObject()
 {
         timeElapsed += Time.deltaTime; 
 
-        if (timeElapsed > 3f && count < 10) // 3초가 지났는지 확인, 10마리만 생성 
+        if (timeElapsed > 3f && count < monstersNumber) // 3초가 지났는지 확인, 그리고 지정한 몬스터 수가 맞는지 확인 
         {
             if (playerTransform != null)
             {
@@ -165,15 +181,15 @@ void SpawnObject()
                 
                 System.Random rand = new System.Random();
 
-                float xPos = rand.Next((int)playerPosition.x - 20, (int)playerPosition.x + 20);// x
-                float yPos = rand.Next((int)playerPosition.y - 20, (int)playerPosition.y + 20);// y
+                float xPos = rand.Next((int)playerPosition.x - 20, (int)playerPosition.x + 20);
+                float yPos = rand.Next((int)playerPosition.y - 20, (int)playerPosition.y + 20);
                 
-                int number = rand.Next(0,4); 
+                int rannum = rand.Next(0,typeMonsters-1); 
                 
                 Vector2 randomPos = new Vector2(xPos, yPos);
 
 
-                Instantiate(gameObject[number], randomPos, Quaternion.identity);
+                Instantiate(gameObject[rannum], randomPos, Quaternion.identity);
 
                 // timeElapsed를 0으로 리셋
                 timeElapsed = 0f;
@@ -183,6 +199,4 @@ void SpawnObject()
         }
 
 }
-
-#endregion
 }
