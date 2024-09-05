@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9021242056261692141}
   m_Layer: 0
   m_Name: prevention2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 8160934191431728393}
   m_Layer: 0
   m_Name: prevention1
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,9 +147,10 @@ GameObject:
   - component: {fileID: 8951912485059594713}
   - component: {fileID: 1844682859915912566}
   - component: {fileID: 4374954851576357452}
+  - component: {fileID: -3054277759058425573}
   m_Layer: 0
   m_Name: slime05
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 8380952410984010453}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.88625, y: 5.6731477, z: 0}
+  m_LocalPosition: {x: -28.638046, y: 3.862842, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -283,7 +284,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 5.5, y: 5}
+  m_Size: {x: 6, y: 5}
   m_Direction: 0
 --- !u!114 &4374954851576357452
 MonoBehaviour:
@@ -299,3 +300,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   target: {fileID: 0}
+--- !u!114 &-3054277759058425573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8380952410984010453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f2540403aad46b8aed82fe58734d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterHpMax: 10
+  monsterHp: 0
