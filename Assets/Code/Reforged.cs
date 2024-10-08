@@ -54,8 +54,8 @@ public class Reforged : MonoBehaviour
     #endregion
     
     #region  수정된 코드 
-    public float tileWidth = 40f; // 타일의 가로 크기
-    public float tileHeight = 40f; // 타일의 세로 크기
+    [SerializeField]public float tileWidth = 120f; // 타일의 가로 크기
+    [SerializeField] public float tileHeight = 120f; // 타일의 세로 크기
 
     private void OnTriggerExit2D(Collider2D other) 
     {
