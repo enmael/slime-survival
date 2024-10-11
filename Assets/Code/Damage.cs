@@ -96,23 +96,5 @@ public class Damage : MonoBehaviour
         {
             TakeDamage(10f);
         }
-    }
-
-// private void Update() 
-// {
-//     // 무적타임 이 끝나면 데미지 입게 만들기 
-//     // if(count == false)
-//     // {
-//     //     timeElapsed += Time.deltaTime;
-//     //     if(timeElapsed > eligibleTime)
-//     //     {
-//     //         count = true;
-//     //         timeElapsed = 0f;
-//     //     }
-//     // }
-
-    
-// }
-
-    
+    }    
 }

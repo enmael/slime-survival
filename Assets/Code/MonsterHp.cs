@@ -79,10 +79,13 @@ public class MonsterHp : MonoBehaviour
     public float monsterHpMax = 10f; // 몬스터의 최대 체력 
     public float monsterHp; //현재 몬스터의 체력 
 
+    static public int monsteCount = 0;
+    
       void Start()
     {
         monsterHp = monsterHpMax;
     }
+
 
      public void TakeDamage(float damage)
     {
@@ -90,6 +93,7 @@ public class MonsterHp : MonoBehaviour
         if (monsterHp <= 0)
         {
             Die();
+
         }
     }
 
@@ -97,6 +101,8 @@ public class MonsterHp : MonoBehaviour
     {
         Debug.Log("Monster is dead!");
         Destroy(gameObject);
+        monsteCount++;
+
     }
 
         void OnCollisionEnter2D(Collision2D col)
@@ -107,6 +113,4 @@ public class MonsterHp : MonoBehaviour
             TakeDamage(5f);
         }
     }
-
-
 }
