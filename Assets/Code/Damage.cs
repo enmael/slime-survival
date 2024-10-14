@@ -67,12 +67,24 @@ public class Damage : MonoBehaviour
     // 체력바 관련 변수 
     public Slider healthSlider;      
     public float maxHealth = 100f; 
-    private float currentHealth; 
+    private float currentHealth;
+
+    public float CurrentHealth
+    {
+        get { return currentHealth; }
+        set { currentHealth = value; }
+    }
+
 
     void Start()
     {
         currentHealth = maxHealth; 
         UpdateHealthBar();         
+    }
+
+    private void Update()
+    {
+        UpdateHealthBar();
     }
 
     //0 밑으로 체력이 떨어지 않게하는 함수 

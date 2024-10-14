@@ -81,31 +81,30 @@ public class MonsterHp : MonoBehaviour
 
     static public int monsteCount = 0;
     
-      void Start()
+    void Start()
     {
         monsterHp = monsterHpMax;
     }
 
 
-     public void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         monsterHp -= damage;  // 몬스터 체력 감소
         if (monsterHp <= 0)
         {
             Die();
-
         }
     }
 
     void Die()
     {
-        Debug.Log("Monster is dead!");
+   
         Destroy(gameObject);
         monsteCount++;
 
     }
 
-        void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         
         if (col.gameObject.CompareTag("playe"))

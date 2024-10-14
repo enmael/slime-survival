@@ -8,7 +8,7 @@ public class KiiCount : MonoBehaviour
     {
 
         UpdateKiiCount(MonsterHp.monsteCount);
-        Debug.Log("count:" + MonsterHp.monsteCount);
+        //Debug.Log("count:" + MonsterHp.monsteCount);
 
     }
 

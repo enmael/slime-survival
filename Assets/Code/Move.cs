@@ -59,23 +59,36 @@ public class Move : MonoBehaviour
     #endregion
 
     public Vector2 inputV2;
-    public float speed = 3.0f ;
+    [SerializeField]public float speed = 10.0f ;
+    [SerializeField] public float speedMax = 20.0f;
 
+   
     Rigidbody2D rigidbody2D;
     SpriteRenderer spriteRenderer;
+
+    public float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
+
 
     void Awake() 
     {
         rigidbody2D = GetComponent<Rigidbody2D>();       
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+  
 
     void FixedUpdate()
     {
-        // 이동 벡터를 계산
-        Vector2 moveVector = inputV2 * speed * Time.fixedDeltaTime;
-        // 물리적 이동
-        rigidbody2D.MovePosition(rigidbody2D.position + moveVector);
+        
+            // 이동 벡터를 계산
+            Vector2 moveVector = inputV2 * speed * Time.fixedDeltaTime;
+            // 물리적 이동
+            rigidbody2D.MovePosition(rigidbody2D.position + moveVector);
+
+
     }
 
     void OnMove(InputValue value)

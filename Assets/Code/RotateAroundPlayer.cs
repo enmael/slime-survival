@@ -9,19 +9,14 @@ public class RotateAroundPlayer : MonoBehaviour
     [SerializeField]public float distanceFromPlayer = 2f;  // 플레이어와의 거리
 
 
-     private void Update()
-    {
+     private void FixedUpdate()
+     {
         //Vector2 dis = new Vector2(distanceFromPlayer,distanceFromPlayer);
 
         // 플레이어와 일정 거리를 유지하면서 회전
         transform.position = player.position + (transform.position - player.position).normalized * distanceFromPlayer;
         
-        // Vector2 PosX= transform.position - player.position;
-
-        // if(dis.x < PosX.x)
-        // {
-
-        // }
+       
         
         // 플레이어 주변에서 회전
         transform.RotateAround(player.position, Vector3.forward, rotationSpeed * Time.deltaTime);
