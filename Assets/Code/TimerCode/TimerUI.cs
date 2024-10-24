@@ -6,8 +6,14 @@ public class TimerUI : MonoBehaviour
 {
     
    public Text timerText; // UI Text 컴포넌트 연결
-
-    private int  timer;
+   //public Text returnText;
+   public GameOver gameOver;
+  private int  timer;
+    
+    private void Awake() 
+    {
+      gameOver = gameOver.GetComponent<GameOver>(); 
+    }
 
     void Start()
     {
@@ -20,8 +26,12 @@ public class TimerUI : MonoBehaviour
       while(true)
       {
         yield return new WaitForSeconds(1);
-        timer++;
-        UpdateTimerUI();
+        // if(gameOver.GameOverConte == false)
+        // {
+          timer++;
+          UpdateTimerUI();
+        //}
+        
       }  
 
     }
@@ -32,5 +42,6 @@ public class TimerUI : MonoBehaviour
         int minutes = Mathf.FloorToInt(timer / 60); // 분 단위
         int seconds = Mathf.FloorToInt(timer % 60); // 초 단위
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        //returnText.text = timerText.text;
     }
 }

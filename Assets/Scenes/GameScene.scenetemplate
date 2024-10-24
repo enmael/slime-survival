@@ -17,9 +17,14 @@ MonoBehaviour:
   description: 
   preview: {fileID: 0}
   dependencies:
+  - dependency: {fileID: 2800000, guid: 84f5d586479e99a4d8e3dd4822848edf, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: -944628639613478452, guid: 81596ead1737b4035853f46b2539dc3c,
       type: 3}
     instantiationMode: 1
+  - dependency: {fileID: 2895860153254370009, guid: d6f38c845327dd444b2f18c3cb6dbac7,
+      type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 11400000, guid: 6d62ee5bebfab4543a4d42e4d00e4921, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 34303d25145ab104f8fabf97fe65552d, type: 2}
@@ -37,6 +42,9 @@ MonoBehaviour:
   - dependency: {fileID: 7686756291397857516, guid: 28e7ec372ae8d45ba8ac8b276123566d,
       type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 8211838582737411065, guid: f4770384a06d4764597273689b4089b6,
+      type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 11400000, guid: 7b6e368fc0ee90b4ca09e0f71344589a, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 2800000, guid: bc773256dd1a7474a86a67f0fe38f4b4, type: 3}
@@ -45,6 +53,9 @@ MonoBehaviour:
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 2367cb1fa5ebd9d4d9082b473634a906, type: 2}
     instantiationMode: 1
+  - dependency: {fileID: 6483220321470326547, guid: a1a430ce439a17248b46b46b8ef58369,
+      type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 11400000, guid: 76a0eb89921157e448ea699f93e95564, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 5750711689612855319, guid: 067ef2ea7437841ce9db2626a6e5be4e,
@@ -73,6 +84,8 @@ MonoBehaviour:
   - dependency: {fileID: 2800000, guid: 1c9ed9d1200c29d4cbfd2071028c1cd5, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: c28bfe6b103c31e4eabbf361017b73f6, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: ba3d5f72a828ae04fbab990a6fd1dff4, type: 3}
     instantiationMode: 0
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}
