@@ -18,8 +18,17 @@ public class ReturnToLobby : MonoBehaviour
 public void ReturnLobby()
 {    
     SceneManager.LoadScene("LobbyScene");
+    MonsterHp.monsteCount = 0;
+    TimerUI.timer = 0;
 
 }
+
+public void GameRestart()
+    {
+        SceneManager.LoadScene("GameScene");
+        MonsterHp.monsteCount = 0;
+        TimerUI.timer = 0;
+    }
 
 public void ExitGame()
 {
