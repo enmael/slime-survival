@@ -1113,8 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35048cff9d25434daa7e37f3d8b7585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerUI: {fileID: 0}
-  text: {fileID: 1680359798}
+  tiemScore: {fileID: 1680359798}
 --- !u!1 &1954155695
 GameObject:
   m_ObjectHideFlags: 0

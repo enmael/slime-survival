@@ -6,10 +6,16 @@ public class TimerUI : MonoBehaviour
 {
   
   public Text timerText; // UI Text 컴포넌트 연결
-  private int  timer;
+  public static int  timer;
+
+  public int ReturnTimer
+  {
+    get { return timer; } 
+  }
+
   void Start()
   {
-        StartCoroutine(TimeCoroutine());
+    StartCoroutine(TimeCoroutine());
   }
 
   private IEnumerator TimeCoroutine()
