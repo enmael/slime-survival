@@ -1,3 +1,12 @@
+/*
+# ----------------------------------------------------------------------------------------
+#파일이름 :ItemSpawn.cs
+#작성자 : 장승배
+#생성일 : 2024.10.28
+#내용 : 플레이어 주변에 아이템을 뿌리는 코드 
+# ------------------------------------------------------------------------------------------
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +21,7 @@ public class ItemSpawn : MonoBehaviour
 
     public GameObject[] ItemList
     {
-        get { return Item; } // �迭�� ��ȯ
+        get { return Item; } // �迭�� ��ȯ
     }
 
     private void Start()

@@ -109,10 +109,10 @@ public class monster : MonoBehaviour
                 Debug.LogError("GameManager.instance.move is not assigned.");
             }
         }
-        // else
-        // {
-        //     Debug.LogError("GameManager.instance is not assigned.");
-        // }
+        else
+        {
+            Debug.LogError("GameManager.instance is not assigned.");
+        }
     }
 
     #endregion
