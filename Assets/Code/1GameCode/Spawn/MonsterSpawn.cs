@@ -1,3 +1,12 @@
+/*
+# ----------------------------------------------------------------------------------------
+#파일이름 :MonsterSpawn.cs
+#작성자 : 장승배
+#생성일 : 2024.10.31
+#내용 : 좌우로 지정한 숫자 만큼 몬스터를 새성하는 코드 
+# ------------------------------------------------------------------------------------------
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,14 +28,30 @@ public class MonsterSpawn : MonoBehaviour
     private bool rightbool = true; 
     private bool leftbool = false;  
 
+
+    ReuseMonsterSpawn reuseMonsterSpawn;   
+
+    private void Awake() 
+    {
+        reuseMonsterSpawn  = FindObjectOfType<ReuseMonsterSpawn>();
+    }
     private void Start()
     {
         StartCoroutine(MonsterSpawnCoroutine());
+        
+    }
+    private void Update()
+    {
+        if(monstersNumber == MonsterHp.monsteCount)
+        {
+            reuseMonsterSpawn.gameObjectsListBoolS = true;
+            Debug.Log("리사이클 코드로 넘어감 ");
+        }
     }
 
     IEnumerator MonsterSpawnCoroutine()
     {
-        while (count < monstersNumber)
+        while (monstersNumber > count )
         {
             Location();
             
@@ -64,9 +89,9 @@ public class MonsterSpawn : MonoBehaviour
         {
             monsterChase.SetPlayerTransform(playerTransform);
         }
-        
-        
         RemoveCloneName(monster);
+        reuseMonsterSpawn.gameObjectsListS.Add(monster);
+
     }
 
 
@@ -74,7 +99,7 @@ public class MonsterSpawn : MonoBehaviour
     {
         if (clone.name.EndsWith("(Clone)"))
         {
-            clone.name = clone.name.Replace("(Clone)", "") + count;
+            clone.name = clone.name.Replace("(Clone)", "");
         }
     }
 }

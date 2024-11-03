@@ -1075,6 +1075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668265928}
   - component: {fileID: 668265929}
+  - component: {fileID: 668265930}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -1119,9 +1120,25 @@ MonoBehaviour:
   - {fileID: 5750711689612855319, guid: 067ef2ea7437841ce9db2626a6e5be4e, type: 3}
   - {fileID: 4048406842968128352, guid: 80532725144d446588224a623728a246, type: 3}
   - {fileID: 8380952410984010453, guid: 5022a219176fb4b9d932c96024b6808b, type: 3}
-  monstersNumber: 30
-  spawnTime: 1
+  monstersNumber: 100
+  spawnTime: 0.3
   playerTransform: {fileID: 1169449807}
+--- !u!114 &668265930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668265927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053e8484539134be0b2da90051b98ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsList: []
+  RightSpawnManager: {fileID: 581040035}
+  LeftSpawnManager: {fileID: 1345326057}
+  gameObjectsListBool: 0
 --- !u!1 &697448607
 GameObject:
   m_ObjectHideFlags: 0

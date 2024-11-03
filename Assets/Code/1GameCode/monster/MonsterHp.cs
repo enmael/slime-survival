@@ -98,8 +98,9 @@ public class MonsterHp : MonoBehaviour
 
     void Die()
     {
-   
-        Destroy(gameObject);
+        monsterHp = 10;
+        gameObject.SetActive(false);    
+        //Destroy(gameObject);
         monsteCount++;
 
     }

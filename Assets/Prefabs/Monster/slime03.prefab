@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 314289850876883039, guid: f4770384a06d4764597273689b4089b6,
     type: 3}
-  speed: 6
+  speed: 10
 --- !u!1 &6012866033264473477
 GameObject:
   m_ObjectHideFlags: 0
