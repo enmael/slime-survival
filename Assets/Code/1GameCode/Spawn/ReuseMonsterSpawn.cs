@@ -46,7 +46,7 @@ public class ReuseMonsterSpawn : MonoBehaviour
     {
         if (gameObjectsListBool == true)
         {
-            Debug.Log("Dsadasds!!wasdda!!");
+            //Debug.Log("Dsadasds!!wasdda!!");
             Location();
         }
         
@@ -56,7 +56,7 @@ public class ReuseMonsterSpawn : MonoBehaviour
     {
         for (int i = 0; i < gameObjectsList.Count; i++)
     {
-        Debug.Log("Dsadasds");
+        //Debug.Log("Dsadasds");
         if (gameObjectsList[i].activeSelf == false)
         {
             GameObject gameObject = gameObjectsList[i];
