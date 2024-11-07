@@ -14,7 +14,7 @@ using UnityEngine;
 
 public class ThorwAxe : MonoBehaviour
 {
-      [SerializeField] Transform player;
+    [SerializeField] Transform player;
     [SerializeField] float speed = 30f;
     [SerializeField] float respawnTime = 2f;
 
@@ -30,7 +30,7 @@ public class ThorwAxe : MonoBehaviour
      
         //StartCoroutine(Mollu());
         myCollider = GetComponent<Collider2D>();
-        myCollider = gameObject.GetComponent<Collider2D>(); 
+        //myCollider = gameObject.GetComponent<Collider2D>(); 
     }
     void Update()
     {

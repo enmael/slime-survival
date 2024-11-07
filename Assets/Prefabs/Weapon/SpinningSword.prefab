@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20824dff0aa5486dbf97d2dbf8d8736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 314289850876883039, guid: f4770384a06d4764597273689b4089b6, type: 3}
   rotationSpeed: 300
   distanceFromPlayer: 8
 --- !u!1 &7925395405190917024

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e147fbc8af154c5ba3d3df94323c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 314289850876883039, guid: f4770384a06d4764597273689b4089b6, type: 3}
   speed: 30
   respawnTime: 2
   activate: 1

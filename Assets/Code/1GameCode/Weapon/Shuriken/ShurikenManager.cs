@@ -35,7 +35,7 @@ public class ShurikenManager : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime; 
-        float t = time/3;
+        //float t = time/3;
 
         // if(t > time)
         // {

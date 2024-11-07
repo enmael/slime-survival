@@ -105,12 +105,21 @@ public class MonsterHp : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
+    // void OnCollisionEnter2D(Collision2D col)
+    // {
         
-        if (col.gameObject.CompareTag("playe"))
+    //     if (col.gameObject.CompareTag("playe"))
+    //     {
+    //         TakeDamage(5f);
+    //     }
+    // }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.gameObject.CompareTag("playe"))
         {
             TakeDamage(5f);
         }
+        
     }
 }
