@@ -11,77 +11,85 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//[RequireComponent(typeof(Move))]
 public class MapManager : MonoBehaviour
 {
     [SerializeField]List<GameObject>list;
-    // //--- 추가---
-    // [SerializeField]int[] blockNumber = { 8, 3, -2, -7, -12 };
-    // [SerializeField]List<GameObject>objectsList;
-    // // ---
-    Move move;
+
+    [SerializeField]Move move;
     void Start()
     {
-        
-        move = GetComponent<Move>();
         list.Capacity = 20;
-        // //추가--
-        // objectsList.Capacity = 20; 
-        // //--
     }
 
- private void Update() 
-    {
-        Debug.Log("x :" + move.Movement.x);
+//  private void Update() 
+//     {
+//         Debug.Log("x :" + move.Movement.x);
     
-        if (list != null && list.Count > 0)
-        {
-            //right(1) left(-1)
-            Vector2 vectorRight = new Vector2(55,0);
-            Vector2 vectorLeft= new Vector2(-55,0);
+//         if (list != null && list.Count > 0)
+//         {
+//             //right(1) left(-1)
+//             Vector2 vectorRight = new Vector2(55,0);
+//             Vector2 vectorLeft= new Vector2(-55,0);
 
-            if(move.Movement.x  > 0)
-            {   
-                Vector2 listA =list[0].transform.position;
-                listA = listA +  vectorRight;
-                list[0].transform.position = listA;
-                //list[0].gameObject.SetActive(true);
-                list.RemoveAt(0);
+//             if(move.Movement.x  > 0)
+//             {   
+//                 Vector2 listA =list[0].transform.position;
+//                 listA = listA +  vectorRight;
+//                 list[0].transform.position = listA;
+//                 //list[0].gameObject.SetActive(true);
+//                 list.RemoveAt(0);
                  
-            }
-            else if(move.Movement.x <0)
-            {
-                 Vector2 listA =list[0].transform.position;
-                listA = listA +  vectorLeft;
-                list[0].transform.position = listA;
-                //list[0].gameObject.SetActive(true);
-                list.RemoveAt(0);
-            }
-        }   
+//             }
+//             else if(move.Movement.x <0)
+//             {
+//                  Vector2 listA =list[0].transform.position;
+//                 listA = listA +  vectorLeft;
+//                 list[0].transform.position = listA;
+//                 //list[0].gameObject.SetActive(true);
+//                 list.RemoveAt(0);
+//             }
+//         }   
         
-    }
-    private void OnTriggerExit2D(Collider2D other)
+//     }
+//     private void OnTriggerExit2D(Collider2D other)
+//     {
+//         GameObject gameObject= other.gameObject;
+//         if (other.CompareTag("Map"))
+//         {
+//             //gameObject.SetActive(false);
+//             list.Add(gameObject);
+//         }
+//     }
+private void Update() 
+{
+
+    if (list != null && list.Count > 0)
     {
-        GameObject gameObject= other.gameObject;
-        if (other.CompareTag("Map"))
+        Vector2 vectorRight = new Vector2(55, 0);
+        Vector2 vectorLeft = new Vector2(-55, 0);
+
+        // 첫 번째 오브젝트 위치를 직접 업데이트
+        if(move.Movement.x > 0)
+        {   
+            list[0].transform.position += (Vector3)vectorRight; // 위치 업데이트
+            list.RemoveAt(0);
+        }
+        else if(move.Movement.x < 0)
         {
-            //gameObject.SetActive(false);
-            list.Add(gameObject);
+            list[0].transform.position += (Vector3)vectorLeft; // 위치 업데이트
+            list.RemoveAt(0);
         }
     }
+}
 
-    // private void RandomObject()
-    // {
-    //     //1. 생성할 블록을 갯수를 정한다.
-    //     int number = UnityEngine.Random.Range(1,4);
-        
-    //     for(int i = 0; i < number; i++)
-    //     {
-    //         int bloc = UnityEngine.Random.Range(0,5);
+private void OnTriggerExit2D(Collider2D other)
+{
+    if (other.CompareTag("Map"))
+    {
+        list.Add(other.gameObject); // 필요한 경우에만 리스트에 추가
+    }
+}
 
-    //     } 
-    //     //int bloc = UnityEngine.Random.Range(0,5);
 
-    // }
+  
 }

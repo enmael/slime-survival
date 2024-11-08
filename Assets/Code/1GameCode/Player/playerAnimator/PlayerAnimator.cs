@@ -1,3 +1,13 @@
+/*
+# ----------------------------------------------------------------------------------------
+#파일이름 :PlayerAnimator.cs
+#작성자 : 장승배
+#생성일 : 2024.10.06
+#내용 :  캐릭터의 애니메이션을 적용하는 코드이다 
+# ------------------------------------------------------------------------------------------
+*/
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +17,7 @@ public class PlayerAnimator : MonoBehaviour
 
     [SerializeField] Animator animator;
     private bool slideBool = false; 
-          float time = 0;
+    float time = 0;
     void Start()
     {
         animator = GetComponent<Animator>();    

@@ -1,37 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+// //폐기 
 
-public class LaunchingPad : MonoBehaviour
-{
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+
+// public class LaunchingPad : MonoBehaviour
+// {
     
-    [SerializeField] GameObject RightPad;
-    [SerializeField] GameObject LeftPad;
-   // Move move;
+//     [SerializeField] GameObject RightPad;
+//     [SerializeField] GameObject LeftPad;
+//    // Move move;
 
-    // private void Start() 
-    // {
-    //     move = GetComponent<Move>();
+//     // private void Start() 
+//     // {
+//     //     move = GetComponent<Move>();
     
-    // }
-    // [SerializeField] GameObject Pad;
+//     // }
+//     // [SerializeField] GameObject Pad;
 
-    private void Update()
-    {
-        float movement = Input.GetAxisRaw("Horizontal");
-        float sc = movement;
+//     private void Update()
+//     {
+//         float movement = Input.GetAxisRaw("Horizontal");
+//         float sc = movement;
 
-       if (sc > 0)
-       {
-            LeftPad.SetActive(false);
-            RightPad.SetActive(true); 
-       }
-       else if(sc < 0)
-       {
-            RightPad.SetActive(false); 
-            LeftPad.SetActive(true);
-       }
+//        if (sc > 0)
+//        {
+//             LeftPad.SetActive(false);
+//             RightPad.SetActive(true); 
+//        }
+//        else if(sc < 0)
+//        {
+//             RightPad.SetActive(false); 
+//             LeftPad.SetActive(true);
+//        }
     
-    } 
+//     } 
 
-}
+// }

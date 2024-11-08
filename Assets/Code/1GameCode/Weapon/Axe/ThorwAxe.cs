@@ -14,6 +14,7 @@ using UnityEngine;
 
 public class ThorwAxe : MonoBehaviour
 {
+    [SerializeField] Move move;
     [SerializeField] Transform player;
     [SerializeField] float speed = 30f;
     [SerializeField] float respawnTime = 2f;
@@ -28,9 +29,7 @@ public class ThorwAxe : MonoBehaviour
     void Start()
     {  
      
-        //StartCoroutine(Mollu());
-        myCollider = GetComponent<Collider2D>();
-        //myCollider = gameObject.GetComponent<Collider2D>(); 
+        myCollider = gameObject.GetComponent<Collider2D>(); 
     }
     void Update()
     {
@@ -51,16 +50,12 @@ public class ThorwAxe : MonoBehaviour
                     
                     moveX2 = moveX; 
                     activate = false;
-                    myCollider.isTrigger = true; 
-
+            
                 }
                 
             }
-            if(time > 0.15f)
-            {
-                myCollider.isTrigger = false; 
-            }
-            
+           
+            //speed = speed +move.Speed;
             transform.Translate(moveX2 * speed * Time.deltaTime, 0, 0);
         }
         else
@@ -73,10 +68,5 @@ public class ThorwAxe : MonoBehaviour
         }
     }
 
-    // private IEnumerator Mollu()
-    // {
-    //     yield return new WaitForSeconds(1);
-    //     gameObject.SetActive(true);
-    // }
 
 }

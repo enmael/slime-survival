@@ -80,6 +80,14 @@ public class MonsterHp : MonoBehaviour
     public float monsterHp; //현재 몬스터의 체력 
 
      static public int monsteCount = 0;
+
+    public float damage = 5f;
+
+    public float Damages
+    {
+        get { return damage; }
+        set { damage = value; }
+    }
     
     void Start()
     {
@@ -105,20 +113,20 @@ public class MonsterHp : MonoBehaviour
 
     }
 
-    // void OnCollisionEnter2D(Collision2D col)
-    // {
+    void OnCollisionEnter2D(Collision2D col)
+    {
         
-    //     if (col.gameObject.CompareTag("playe"))
-    //     {
-    //         TakeDamage(5f);
-    //     }
-    // }
+        if (col.gameObject.CompareTag("playe"))
+        {
+            TakeDamage(damage);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.gameObject.CompareTag("playe"))
         {
-            TakeDamage(5f);
+            TakeDamage(damage);
         }
         
     }

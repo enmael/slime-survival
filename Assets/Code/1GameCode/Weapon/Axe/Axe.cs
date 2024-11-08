@@ -15,33 +15,8 @@ public class Axe : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 300f;
     
-    //[SerializeField]Collider2D myCollider;
-    //[SerializeField] private GameObject targetObject;
-    void Start()
-    {  
-        
-       //myCollider = GetComponent<Collider2D>();
-        
-        //StartCoroutine(ActivateObjectAfterDelay());
-
-        //StartCoroutine(myColliderCoroutine());
-         
-       
-    }
     void Update()
     {
         transform.Rotate(new Vector3(0,0,1), rotationSpeed * Time.deltaTime);  
     }
-    // IEnumerator myColliderCoroutine()
-    // {
-    //    while (true)
-    //     {
-           
-    //         myCollider.isTrigger = true;
-    //         yield return new WaitForSeconds(1f);
-    //         myCollider.isTrigger = false;
-    //         yield return new WaitForSeconds(1f);
-    //     }
-         
-    // }
 }
