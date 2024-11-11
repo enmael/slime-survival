@@ -16,39 +16,24 @@ public class Fist : MonoBehaviour
     [SerializeField]GameObject fist;
     [SerializeField] private Boxing boxing;
     
-    [SerializeField] Move move;
-    
-    private bool RotateBool =true;
     private void Start() 
     {
         StartCoroutine(FistCoroutine());    
     }
-    // private void Update() 
-    // {
-    //     Debug.Log("boxing.Count : " + boxing.FistCount);
-    //     //  if(boxing.FistCount%3 == 0)
-    //     // {
-    //     //     fist.transform.localScale = new Vector2(3, 3);
 
-    //     // } 
-    //     // else
-    //     // {
-    //     //    fist.transform.localScale = new Vector2(1, 1);
-    //     // }
-    // }
-    private void Update() 
+    private void Update()
     {
-        if(move.Movement.x <0)
-        {
-            fist.transform.Rotate(180,0,0);
-        }   
-        else
-        {
-            fist.transform.Rotate(0,0,0);
-        }     
+        //float moveX = Input.GetAxis("Horizontal");
+        //if (moveX < 0)
+        //{
+        //    fist.transform.Rotate(180, 0, 0);
+        //}
+        //else
+        //{
+        //    fist.transform.Rotate(0, 0, 0);
+        //}
     }
-
-       private IEnumerator FistCoroutine()
+    private IEnumerator FistCoroutine()
     {
         
         while (true)

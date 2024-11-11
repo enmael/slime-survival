@@ -26,15 +26,16 @@ public class PlayerAnimator : MonoBehaviour
     void Update()
     
     {
-        float move = Input.GetAxisRaw("Horizontal");
+        float moveX= Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
-        float moveCpoe = move;
-
-        if (moveCpoe == 0 )    
+        float moveXCpoe = moveX;
+        float moveYCpoe = moveY;
+        if (moveXCpoe == 0 && moveYCpoe == 0)    
         {
             animator.Play("penguin_idle");
         }
-        else if (moveCpoe !=0 && slideBool == false)    
+        else if (moveXCpoe != 0 || moveYCpoe != 0 && slideBool == false)    
         {
             animator.Play("penguin_walk");
             
@@ -49,7 +50,7 @@ public class PlayerAnimator : MonoBehaviour
             
         }
 
-        if(moveCpoe !=0 && slideBool == true)
+        if(moveXCpoe != 0 && slideBool == true)
         {
             animator.Play("penguin_slide");
         }

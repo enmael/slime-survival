@@ -42,7 +42,7 @@ public class MonsterSpawn : MonoBehaviour
     }
     private void Update()
     {
-        if(monstersNumber == MonsterHp.monsteCount)
+        if(monstersNumber < MonsterHp.monsteCount)
         {
             reuseMonsterSpawn.gameObjectsListBoolS = true;
             Debug.Log("리사이클 코드로 넘어감 ");

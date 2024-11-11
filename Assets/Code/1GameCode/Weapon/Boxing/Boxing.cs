@@ -22,7 +22,9 @@ public class Boxing : MonoBehaviour
     private float time;
     private float moveX2 = 0; 
 
-    [SerializeField] int fistCount = 0;   
+    [SerializeField] int fistCount = 0;
+
+    [SerializeField] GameObject fist;
 
     public int FistCount
     {
@@ -47,9 +49,21 @@ public class Boxing : MonoBehaviour
                 moveX2 = moveX; 
                 activate = false; 
                 fistCount++;
+                if (moveX2 < 0)
+                {
+                    fist.transform.Rotate(0, 180, 0);
+                    //fist.transform.localScale = new Vector3(-1, 1, 1);
+                }
+                else if (moveX2 > 0)
+                {
+                    fist.transform.eulerAngles = new Vector3(0, 0, 0);
+                    //fist.transform.Rotate(0, 0, 0);
+                    //fist.transform.localScale = new Vector3(1, 1, 1);
+                }
+
             }
 
-            if(moveX2 == 0)
+            if (moveX2 == 0)
             {
                 // 움직이지 않을때는 한 방향으로만 날라감 
                  transform.Translate(1 * speed * Time.deltaTime, 0, 0);
@@ -66,4 +80,16 @@ public class Boxing : MonoBehaviour
             activate = true;
         }
     }
+
+    //private void Update()
+    //{
+    //    if (move.Movement.x < 0)
+    //    {
+    //        fist.transform.Rotate(180, 0, 0);
+    //    }
+    //    else
+    //    {
+    //        fist.transform.Rotate(0, 0, 0);
+    //    }
+    //}
 }
