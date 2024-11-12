@@ -4018,6 +4018,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c44a25cf9bd234ece9144c177ce4a6ea, type: 2}
   - {fileID: 21300000, guid: 0df665193b84146d2b12c7754e6c32f2, type: 2}
   - {fileID: 21300000, guid: 0e25630da70c84249b57411d4c0ee60e, type: 3}
+  - {fileID: 21300000, guid: 44f02623b4a744e9d8466e261537f001, type: 3}
   itemManager3: {fileID: 1849263770}
   itemName: 
   itmeImage: {fileID: 2088540374}

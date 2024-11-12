@@ -51,6 +51,7 @@ public class Move : MonoBehaviour
     private void LateUpdate()
     {
         // 이동 방향에 따른 스프라이트 반전
+        //이거 좀더 알아먹게 바꿔라 
         if (movement.x != 0)
         {
             spriteRenderer.flipX = movement.x < 0;
