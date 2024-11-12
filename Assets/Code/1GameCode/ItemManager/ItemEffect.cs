@@ -18,9 +18,10 @@ public class ItemEffect : MonoBehaviour
     [SerializeField] Move move;
     [SerializeField] SelectButton2 selectButton2; 
 
+    [SerializeField] int[]array = new int[4];
 
-    [SerializeField] int[]array = new int[4];   
 
+ 
     private void Update()
     {
         if(selectButton2.Effect == true)
@@ -35,6 +36,7 @@ public class ItemEffect : MonoBehaviour
         if (itemManager3.ItemName == "HpPotion")
         {
             damage.CurrentHealth = damage.CurrentHealth + 20;
+    
         }
         if (itemManager3.ItemName == "SpeedPotion")
         {

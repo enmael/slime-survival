@@ -106,7 +106,7 @@ public class Damage : MonoBehaviour
 
         if (col.gameObject.CompareTag("Monster") )
         {
-            TakeDamage(1f);
+            TakeDamage(5f);
         }
     }    
 }

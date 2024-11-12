@@ -16,8 +16,10 @@ public class SelectButton2 : MonoBehaviour
     [SerializeField] GameObject canvasOject;
 
     [SerializeField] ItemManager3 itemManager3;
-    private bool effect = false;    
+    private bool effect = false;
 
+
+    [SerializeField] AudioSource audioSource;
     public bool Effect
     {
         get { return effect; }
@@ -34,11 +36,23 @@ public class SelectButton2 : MonoBehaviour
 
     public void selectButton()
     {
+        StartCoroutine(selectButton2());
         MonsterHp.monsteCount++;
         Time.timeScale = 1f;
         canvasOject.SetActive(false);
         itemManager3.OneBool = true;
-        effect = true;  
+        effect = true;
 
+    }
+
+    IEnumerator selectButton2()
+    {
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+        //MonsterHp.monsteCount++;
+        //Time.timeScale = 1f;
+        //canvasOject.SetActive(false);
+        //itemManager3.OneBool = true;
+        //effect = true;
     }
 }
