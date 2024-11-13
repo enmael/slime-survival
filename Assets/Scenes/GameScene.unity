@@ -374,10 +374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1743536e4b396cf4a892189cc10f315f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item:
-  - {fileID: 2895860153254370009, guid: d6f38c845327dd444b2f18c3cb6dbac7, type: 3}
-  - {fileID: 6483220321470326547, guid: a1a430ce439a17248b46b46b8ef58369, type: 3}
-  playerTransform: {fileID: 1169449807}
 --- !u!1 &190599161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3998279577607686078, guid: 4f18e62a385414737b73037af4bc9b93,
@@ -420,13 +416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5732c1185b7ac4e4996a5ae89de0f911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponList:
-  - {fileID: 190599161}
-  - {fileID: 341712732}
-  - {fileID: 2188054601240476582, guid: 325d60649d15d214eb15a2d5cd12fd75, type: 3}
-  startWeaponName: 
-  selectButton: {fileID: 1828538318}
-  canvasOject: {fileID: 688162576}
 --- !u!4 &215348022
 Transform:
   m_ObjectHideFlags: 0
@@ -456,15 +445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045ec5bd587a848178381aa5304d0337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 190599161}
-  - {fileID: 7488993886392535496, guid: 7ab83386eb8d446c782c67ce0d9cd686, type: 3}
-  - {fileID: 9185091236868805786, guid: 1314ca711ad2a4eae899afec821ef2be, type: 3}
-  - {fileID: 341712732}
-  - {fileID: 2188054601240476582, guid: 325d60649d15d214eb15a2d5cd12fd75, type: 3}
-  canvasOject: {fileID: 688162576}
-  randomIndex: 0
-  itmename: 
 --- !u!1 &217943266
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +758,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169449807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &280535821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5292998356707958213, guid: 065e0cca217714a2e82ceb2e4b1fbabf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3410331764234155418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &296110343
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,20 +808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164d2407a92b74d35ad02cf93ddfd92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionList:
-  - {fileID: 7488993886392535496, guid: 7ab83386eb8d446c782c67ce0d9cd686, type: 3}
-  - {fileID: 9185091236868805786, guid: 1314ca711ad2a4eae899afec821ef2be, type: 3}
-  weaponList:
-  - {fileID: 3998279577607686078, guid: 4f18e62a385414737b73037af4bc9b93, type: 3}
-  - {fileID: 341712732}
-  - {fileID: 2188054601240476582, guid: 325d60649d15d214eb15a2d5cd12fd75, type: 3}
-  monsterKillItem: {fileID: 215348023}
-  damage: {fileID: 1169449810}
-  move: {fileID: 1169449803}
-  selectButton: {fileID: 1828538318}
-  monsterHp: {fileID: 7786044693699130671, guid: 5906dda8af92d49a5bb531ca07d42119,
-    type: 3}
-  itemName: 
 --- !u!1 &341712732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2865352858024497880, guid: 065e0cca217714a2e82ceb2e4b1fbabf,
@@ -3356,10 +3328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035ba4a97e6b14ba8a3bb68d124fb246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectBool: 0
-  selectBool2: 1
-  canvasOject: {fileID: 688162576}
-  monsterKillItem: {fileID: 215348023}
 --- !u!1 &1838132673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3646,17 +3614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f5f4394fd014e65a43271bb12e526f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itmeImage: {fileID: 2012814824}
-  itemImages:
-  - {fileID: 21300000, guid: e5da68409b6f84622aedfd7ad15e458c, type: 2}
-  - {fileID: 21300000, guid: c44a25cf9bd234ece9144c177ce4a6ea, type: 2}
-  - {fileID: 21300000, guid: 0df665193b84146d2b12c7754e6c32f2, type: 2}
-  - {fileID: 21300000, guid: 3b71ed2e8fd2145d894a88108afeaec1, type: 2}
-  - {fileID: 21300000, guid: 03fc3ac19357b4ed3a55d20a16827d63, type: 2}
-  - {fileID: 21300000, guid: 0e25630da70c84249b57411d4c0ee60e, type: 3}
-  itemManager2: {fileID: 215348021}
-  StartingWeaponBool: 0
-  monsterKillItem: {fileID: 215348023}
 --- !u!114 &2012814824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4321,6 +4278,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1169449807}
+    - target: {fileID: 5574460603899697283, guid: 065e0cca217714a2e82ceb2e4b1fbabf,
+        type: 3}
+      propertyPath: axeObject
+      value: 
+      objectReference: {fileID: 280535821}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

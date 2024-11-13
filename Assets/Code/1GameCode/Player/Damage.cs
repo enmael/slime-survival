@@ -62,7 +62,7 @@ public class Damage : MonoBehaviour
     // 무적 타임 관련 변수
     [SerializeField] int eligibleTime;
     // private bool count  = false;
-    private float timeElapsed = 0;
+    //private float timeElapsed = 0;
 
     // 체력바 관련 변수 
     public Slider healthSlider;      

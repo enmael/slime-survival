@@ -24,12 +24,12 @@ public class ThorwAxe : MonoBehaviour
     private float time;
     private float moveX2 = 0; 
 
-    [SerializeField] private GameObject gameObject;
+    [SerializeField] private GameObject axeObject;
     private Collider2D myCollider;
     void Start()
     {  
      
-        myCollider = gameObject.GetComponent<Collider2D>(); 
+        myCollider = axeObject.GetComponent<Collider2D>(); 
     }
     void Update()
     {
@@ -43,7 +43,7 @@ public class ThorwAxe : MonoBehaviour
                 float moveX = Input.GetAxis("Horizontal");
                 if (moveX == 0)
                 {
-                    gameObject.SetActive(false);
+                    axeObject.SetActive(false);
                 }
                 else
                 {
