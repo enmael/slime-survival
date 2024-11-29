@@ -11,4 +11,5 @@
 - **다양한 무기**: 플레이어의 전략에 따라 선택 가능한 무기 시스템.   
 - **몬스터 오브젝트 재활용**: 최적화를 위해 몬스터 오브젝트를 재활용하여 성능을 유지.
 
-
+## Gameplay Video
+[Gameplay Video](https://youtu.be/U70Z8GzbzvU)  
